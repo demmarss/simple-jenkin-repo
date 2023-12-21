@@ -1,25 +1,11 @@
 pipeline {
-    agent any
-
+    agent {
+        docker { image 'node:20.10.0-alpine3.19' }
+    }
     stages {
-        stage('Insall dependecies JekinsFile') {
+        stage('Test') {
             steps {
-                echo 'I am installing dependencies JekinsFile'
-            }
-        }
-        stage('Buiild JekinsFile') {
-            steps {
-                echo 'I am building the artifact JekinsFile'
-            }
-        }
-        stage('Test JekinsFile') {
-            steps {
-                echo 'I am testing the application JekinsFile'
-            }
-        }
-        stage('Deploy JekinsFile') {
-            steps {
-                echo 'I am deploying the application JekinsFile'
+                sh 'node --version'
             }
         }
     }
