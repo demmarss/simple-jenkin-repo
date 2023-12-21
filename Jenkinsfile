@@ -2,24 +2,24 @@ pipeline {
     agent any
 
     stages {
-        stage('Insall dependecies') {
+        stage('Insall dependecies JekinsFile') {
             steps {
-                echo 'I am installing dependencies'
+                echo 'I am installing dependencies JekinsFile'
             }
         }
-        stage('Buiild') {
+        stage('Buiild JekinsFile') {
             steps {
-                echo 'I am building the artifact'
+                echo 'I am building the artifact JekinsFile'
             }
         }
-        stage('Test') {
+        stage('Test JekinsFile') {
             steps {
-                echo 'I am testing the application'
+                echo 'I am testing the application JekinsFile'
             }
         }
-        stage('Deploy') {
+        stage('Deploy JekinsFile') {
             steps {
-                echo 'I am deploying the application'
+                echo 'I am deploying the application JekinsFile'
             }
         }
     }
