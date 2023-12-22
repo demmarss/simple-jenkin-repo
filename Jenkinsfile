@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
+               sh 'node --version'
                 echo 'Testing is running'
             }
         }
